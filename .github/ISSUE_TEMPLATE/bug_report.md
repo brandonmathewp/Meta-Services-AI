@@ -1,10 +1,9 @@
 ---
-name: Bug report
+name: Bug Report
 about: Create a report to help us improve Meta Services AI
-title: ''
+title: "[BUG] "
 labels: bug
 assignees: brandonmathewp
-
 ---
 
 **Describe the bug**
