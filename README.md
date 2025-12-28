@@ -44,8 +44,6 @@ Unlike standard AI apps, Meta Services allows you to **manage multiple personas*
 |:---:|:---:|
 | <img src="chat.jpg" width="200"> | <img src="settings.jpg" width="200"> |
 
-> *Note: Add your screenshots to a `screenshots` folder in your repo to display them here.*
-
 ## 📥 Installation
 
 1.  Download the latest **`.apk`** file: [**Click Here**](https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk)
