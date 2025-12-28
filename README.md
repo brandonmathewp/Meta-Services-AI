@@ -42,7 +42,7 @@ Unlike standard AI apps, Meta Services allows you to **manage multiple personas*
 
 | Chat Interface | Settings & Personas | Dark Mode |
 |:---:|:---:|:---:|
-| <img src="screenshots/chat.jpg" width="200"> | <img src="screenshots/settings.jpg" width="200"> | <img src="screenshots/dark.jpg" width="200"> |
+| <img src="chat.jpg" width="200"> | <img src="settings.jpg" width="200"> | <img src="dark.jpg" width="200"> |
 
 > *Note: Add your screenshots to a `screenshots` folder in your repo to display them here.*
 
