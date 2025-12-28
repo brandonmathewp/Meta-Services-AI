@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Services AI | Advanced Intelligence API</title>
+    <style>
+        /* --- RESET & VARIABLES --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --bg-color: #000000;
+            --surface-color: #121212;
+            --cyan: #00E5FF;
+            --purple: #AA00FF;
+            --text-white: #ffffff;
+            --text-gray: #b0b0b0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-white);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; transition: 0.3s; }
+        ul { list-style: none; }
+
+        /* --- NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background-color: rgba(18, 18, 18, 0.9);
+            position: sticky;
+            top: 0;
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--cyan);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span { color: var(--purple); }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            font-weight: 500;
+        }
+
+        .nav-links a:hover { color: var(--cyan); }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--cyan), var(--purple));
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            height: 90vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            background: radial-gradient(circle at center, #1a0b2e 0%, #000000 70%);
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            background: -webkit-linear-gradient(0deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        .btn-outline {
+            border: 2px solid var(--cyan);
+            color: var(--cyan);
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: var(--cyan);
+            color: black;
+        }
+
+        /* --- FEATURES --- */
+        .features {
+            padding: 100px 5%;
+            background-color: var(--surface-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 60px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            background: #000;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .feature-card:hover {
+            border-color: var(--cyan);
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: var(--cyan);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        /* --- PRICING --- */
+        .pricing {
+            padding: 100px 5%;
+            text-align: center;
+        }
+
+        .pricing-card {
+            background: #121212;
+            padding: 50px;
+            border-radius: 20px;
+            border: 2px solid var(--purple);
+            max-width: 400px;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card::before {
+            content: "RECOMMENDED";
+            background: var(--purple);
+            color: white;
+            padding: 5px 30px;
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            transform: rotate(45deg);
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 20px 0;
+            color: white;
+        }
+
+        .price span {
+            font-size: 1rem;
+            color: var(--text-gray);
+        }
+
+        .pricing-features {
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .pricing-features li {
+            margin-bottom: 10px;
+            color: var(--text-gray);
+        }
+
+        .pricing-features li::before {
+            content: "✔";
+            color: var(--cyan);
+            margin-right: 10px;
+        }
+
+        /* --- DOWNLOAD --- */
+        .download {
+            padding: 80px 5%;
+            text-align: center;
+            background: linear-gradient(to right, #000, #111);
+            border-top: 1px solid #333;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            padding: 40px 5%;
+            background-color: #000;
+            text-align: center;
+            color: var(--text-gray);
+            border-top: 1px solid #222;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Hide links on mobile for simplicity */
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">META <span>SERVICES AI</span></div>
+        <div class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#download">Download</a>
+        </div>
+        <a href="#pricing" class="btn-primary">Buy Key</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Advanced Intelligence. <br> Unlocked.</h1>
+        <p>Experience the next generation of AI conversations. Secure, private, and powered by the proprietary Meta Services API.</p>
+        <div class="hero-buttons">
+            <a href="#pricing" class="btn-primary">Get API Key</a>
+            <a href="#download" class="btn-outline">Download App</a>
+        </div>
+    </section>
+
+    <section id="features" class="features">
+        <h2 class="section-title">Why Meta Services?</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>⚡ Ultra Low Latency</h3>
+                <p>Our dedicated infrastructure ensures lightning-fast responses, tailored for real-time conversation.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🎭 Multi-Persona</h3>
+                <p>Switch seamlessly between different AI personalities. Coding, Gaming, Writing — we handle it all.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Private & Secure</h3>
+                <p>Your conversations are yours. Our API is built with privacy-first architecture.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📝 Context Aware</h3>
+                <p>Our intelligent history management remembers what matters without wasting tokens.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing">
+        <h2 class="section-title">Purchase Access</h2>
+        <p style="color: gray; margin-bottom: 40px;">Get your private key to unlock the full potential of the Meta Services App.</p>
+        
+        <div class="pricing-card">
+            <h3>Pro Access Key</h3>
+            <div class="price">$5.00 <span>/ month</span></div>
+            <ul class="pricing-features">
+                <li>Unlimited Messages</li>
+                <li>Access to Premium Models</li>
+                <li>Priority Processing</li>
+                <li>24/7 Uptime</li>
+            </ul>
+            <a href="https://t.me/MetaServicesOfficial" target="_blank" class="btn-primary" style="display: block;">Contact to Buy</a>
+            <p style="font-size: 12px; color: gray; margin-top: 15px;">Transaction handled securely via Telegram</p>
+        </div>
+    </section>
+
+    <section id="download" class="download">
+        <h2 style="margin-bottom: 20px;">Download the Official App</h2>
+        <p style="color: gray; margin-bottom: 30px;">Available for Android Devices. Requires Android 8.0+</p>
+        <a href="https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk" class="btn-outline">Download .APK (v1.0)</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Meta Services AI. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
