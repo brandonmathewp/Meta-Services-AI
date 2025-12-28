@@ -1,5 +1,5 @@
 {
   "versionCode": 4,
-  "changelog": "- Updated changelog display issue\n- Fixed Update file bug\n- Please Manually delete old update.apk files",
+  "changelog": "- No new changes...\n- Preparing for future private api.\n- For now please use openrouter api keys",
   "apkUrl": "https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk"
 }
