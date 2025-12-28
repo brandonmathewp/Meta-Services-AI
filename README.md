@@ -1,4 +1,4 @@
-# Meta Services AI 🤖
+# Meta Services AI
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/icon.png" width="120" height="120" alt="App Icon">
