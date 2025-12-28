@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Services AI | Advanced Intelligence API</title>
+    <title>Meta Services AI | Advanced Intelligence</title>
     <style>
         /* --- RESET & VARIABLES --- */
         * {
@@ -81,6 +81,20 @@
         .btn-primary:hover {
             transform: scale(1.05);
             box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);
+        }
+
+        .btn-secondary {
+            background: #333;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: bold;
+            border: 1px solid #444;
+        }
+        
+        .btn-secondary:hover {
+            background: #444;
+            border-color: var(--text-white);
         }
 
         /* --- HERO SECTION --- */
@@ -166,62 +180,41 @@
             font-size: 1.5rem;
         }
 
-        /* --- PRICING --- */
-        .pricing {
+        /* --- PREMIUM TEASER --- */
+        .premium-teaser {
             padding: 100px 5%;
             text-align: center;
         }
 
-        .pricing-card {
-            background: #121212;
+        .teaser-card {
+            background: linear-gradient(135deg, #121212, #0a0a0a);
             padding: 50px;
             border-radius: 20px;
-            border: 2px solid var(--purple);
-            max-width: 400px;
+            border: 1px solid #333;
+            max-width: 500px;
             margin: 0 auto;
             position: relative;
-            overflow: hidden;
         }
 
-        .pricing-card::before {
-            content: "RECOMMENDED";
-            background: var(--purple);
-            color: white;
-            padding: 5px 30px;
-            position: absolute;
-            top: 20px;
-            right: -30px;
-            transform: rotate(45deg);
+        .badge {
+            background: #333;
+            color: var(--text-gray);
+            padding: 5px 15px;
+            border-radius: 15px;
             font-size: 12px;
             font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: inline-block;
         }
 
-        .price {
-            font-size: 3rem;
-            font-weight: bold;
-            margin: 20px 0;
-            color: white;
-        }
-
-        .price span {
-            font-size: 1rem;
-            color: var(--text-gray);
-        }
-
-        .pricing-features {
-            margin: 30px 0;
-            text-align: left;
-        }
-
-        .pricing-features li {
-            margin-bottom: 10px;
-            color: var(--text-gray);
-        }
-
-        .pricing-features li::before {
-            content: "✔";
-            color: var(--cyan);
-            margin-right: 10px;
+        /* --- BUG REPORT --- */
+        .support {
+            padding: 80px 5%;
+            text-align: center;
+            background-color: var(--surface-color);
+            border-top: 1px solid #222;
         }
 
         /* --- DOWNLOAD --- */
@@ -244,7 +237,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Hide links on mobile for simplicity */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -254,18 +247,19 @@
         <div class="logo">META SERVICES<span> AI</span></div>
         <div class="nav-links">
             <a href="#features">Features</a>
-            <a href="#pricing">Pricing</a>
+            <a href="#premium">Premium</a>
+            <a href="#support">Support</a>
             <a href="#download">Download</a>
         </div>
-        <a href="#pricing" class="btn-primary">Buy Key</a>
+        <a href="https://github.com/brandonmathewp/Meta-Services-AI/issues" target="_blank" class="btn-secondary">Report Bug</a>
     </nav>
 
     <section class="hero">
         <h1>Advanced Intelligence. <br> Unlocked.</h1>
         <p>Experience the next generation of AI conversations. Secure, private, and powered by the proprietary Meta Services API.</p>
         <div class="hero-buttons">
-            <a href="#pricing" class="btn-primary">Get API Key</a>
-            <a href="#download" class="btn-outline">Download App</a>
+            <a href="#download" class="btn-primary">Download App</a>
+            <a href="#support" class="btn-outline">Feedback</a>
         </div>
     </section>
 
@@ -291,32 +285,43 @@
         </div>
     </section>
 
-    <section id="pricing" class="pricing">
-        <h2 class="section-title">Purchase Access</h2>
-        <p style="color: gray; margin-bottom: 40px;">Get your private key to unlock the full potential of the Meta Services App.</p>
+    <section id="premium" class="premium-teaser">
+        <h2 class="section-title">Premium Access</h2>
         
-        <div class="pricing-card">
-            <h3>Pro Access Key</h3>
-            <div class="price">$5.00 <span>/ month</span></div>
-            <ul class="pricing-features">
-                <li>Unlimited Messages</li>
-                <li>Access to Premium Models</li>
-                <li>Priority Processing</li>
-                <li>24/7 Uptime</li>
+        <div class="teaser-card">
+            <span class="badge">Coming Soon</span>
+            <h3>Meta Services API Pro</h3>
+            <p style="color: gray; margin: 20px 0;">We are currently finalizing our payment infrastructure. Pro keys will allow unrestricted access to our most powerful models.</p>
+            
+            <ul style="text-align: left; color: var(--text-gray); margin-bottom: 30px; margin-left: 20px;">
+                <li style="margin-bottom: 10px;">✔ Extended Token Limits</li>
+                <li style="margin-bottom: 10px;">✔ Exclusive "Meta-Max" Models</li>
+                <li style="margin-bottom: 10px;">✔ Priority Queueing</li>
             </ul>
-            <a href="https://t.me/MetaServicesOfficial" target="_blank" class="btn-primary" style="display: block;">Contact to Buy</a>
-            <p style="font-size: 12px; color: gray; margin-top: 15px;">Transaction handled securely via Telegram</p>
+
+            <a href="https://t.me/MetaServicesOfficial" target="_blank" class="btn-primary" style="display: block;">Join Updates Channel</a>
+        </div>
+    </section>
+
+    <section id="support" class="support">
+        <h2 class="section-title" style="margin-bottom: 20px;">Feedback & Support</h2>
+        <p style="color: var(--text-gray); max-width: 600px; margin: 0 auto 40px auto;">
+            Found a bug? Have a feature suggestion? Help us improve the app by reporting issues directly on our GitHub tracker.
+        </p>
+        <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+            <a href="https://github.com/brandonmathewp/Meta-Services-AI/issues/new?template=bug_report.md" target="_blank" class="btn-primary" style="background: #D32F2F;">Report a Bug</a>
+            <a href="https://github.com/brandonmathewp/Meta-Services-AI/issues/new?template=feature_request.md" target="_blank" class="btn-secondary">Request Feature</a>
         </div>
     </section>
 
     <section id="download" class="download">
         <h2 style="margin-bottom: 20px;">Download the Official App</h2>
         <p style="color: gray; margin-bottom: 30px;">Available for Android Devices. Requires Android 8.0+</p>
-        <a href="https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk" class="btn-outline">Download Now</a>
+        <a href="https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk" class="btn-outline">Download APK</a>
     </section>
 
     <footer>
-        <p>&copy; 2025 Meta Services - All rights reserved.</p>
+        <p>&copy; 2025 Meta Services AI. All rights reserved.</p>
     </footer>
 
 </body>
