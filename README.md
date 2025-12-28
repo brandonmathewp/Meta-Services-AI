@@ -46,7 +46,7 @@ Unlike standard AI apps, Meta Services allows you to **manage multiple personas*
 
 ## 📥 Installation
 
-1.  Download the latest **`.apk`** file: [**Click Here**](https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk)
+1.  Download the latest **`.apk`** file: [**Click Here**](https://github.com/brandonmathewp/Meta-Services-AI/releases/download/release/Meta.Services.AI_1.0.apk)
 2.  Open the file on your Android device.
 3.  If prompted, allow **"Install from Unknown Sources"**.
 4.  Launch the app and grant the necessary permissions for updates.
