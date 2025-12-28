@@ -1,5 +1,5 @@
 {
-  "versionCode": 6,
+  "versionCode": 2,
   "changelog": "New Changes\n- Added ability to delete chat history.\n\n Premium API coming soon.\nPlease use free openrouter api keys for now to test.",
   "apkUrl": "https://github.com/brandonmathewp/Meta-Services-AI/releases/download/release/Meta.Services.AI_1.0.apk"
 }
