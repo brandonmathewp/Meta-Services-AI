@@ -1,5 +1,5 @@
 {
-  "versionCode": 2,
+  "versionCode": 3,
   "changelog": "- Added dark mode\n- Fixed chat bugs\n- Added changelog viewer",
   "apkUrl": "https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk"
 }
