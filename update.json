@@ -1,5 +1,5 @@
 {
   "versionCode": 4,
-  "changelog": "- Updated changelog display issue\n- Fixed Update file bug",
+  "changelog": "- Updated changelog display issue\n- Fixed Update file bug\n- Please Manually delete old update.apk files",
   "apkUrl": "https://raw.githubusercontent.com/brandonmathewp/Meta-Services-AI/main/app.apk"
 }
